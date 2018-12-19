@@ -1,0 +1,20 @@
+{
+	"name": "komicho/packagist",
+	"type": "library",
+	"description": "get country name and code",
+	"keywords": ["php", "geo", "komicho"],
+	"homepage": "https://github.com/komichoLab/geo",
+	"authors": [
+		{
+			"name": "komicho",
+			"email": "komicho1996@gmail.com",
+			"homepage": "http://www.komicho.ga",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"komicho\\": "/src"
+		}
+	}
+}
