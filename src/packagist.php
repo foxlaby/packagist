@@ -9,7 +9,7 @@ class packagist
 
     public function __construct()
     {
-        $file = file_get_contents(__DIR__.'/../../../composer.lock');
+        $file = file_get_contents(__DIR__.'/../../../../composer.lock');
         $this->packages = json_decode($file, true)['packages'];
     }
 
