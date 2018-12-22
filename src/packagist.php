@@ -50,6 +50,25 @@ class packagist
         return $outPackage;
     }
 
+    public function nameVersion($name = false)
+    {
+        $outPackage = [];
+
+        foreach ($this->packages as $package) {
+            $outPackage[$package['name']] = $package['version'];
+        }
+
+        if (!$name) {
+            return $outPackage;
+        }
+
+        if (!isset($outPackage[$name])) {
+            return 'Your app does not contain this package';
+        }
+
+        return $outPackage[$name];
+    }
+
     public function count()
     {
         return count($this->packages);
