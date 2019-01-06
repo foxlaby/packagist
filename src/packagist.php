@@ -69,6 +69,20 @@ class packagist
         return $outPackage[$name];
     }
 
+    public function getInfoLocal($get = false)
+    {
+        $outPackage = [];
+        foreach ($this->packages as $package) {
+            $outPackage[$package['name']] = $package;
+        }
+        if (!$get) {
+            return $outPackage;
+        }
+        if ($get) {
+            return $outPackage[$get];
+        }
+    }
+
     public function count()
     {
         return count($this->packages);
