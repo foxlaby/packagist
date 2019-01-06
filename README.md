@@ -16,7 +16,7 @@ $list = $pack->get(<options>)->list();
 ```
 options: all (default) || name || version
 ### Results
-```json
+```text
 ...
 {
     name: "egulias/email-validator",
@@ -66,7 +66,7 @@ $list = $pack->getInfoLocal(<name>);
 ```
 name: Void (default) get all the packages || Show the package information specified by its name
 ### Results
-```json
+```text
 ...
 name: "doctrine/inflector",
 version: "v1.3.0",
@@ -109,7 +109,7 @@ $list = $pack->getInfoRemotely(<name>);
 ```
 name: Show the package information specified by its name
 ### Results
-```json
+```text
 {
 package: {
     name: "laravel/laravel",
