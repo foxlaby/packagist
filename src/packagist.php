@@ -30,7 +30,7 @@ class packagist
             if (in_array('name', $this->ops) && in_array('version', $this->ops)) {
                 $outPackage[] = [
                     'name' => $package['name'],
-                    'verfsion' => $package['version'],
+                    'version' => $package['version'],
                 ];
             } else {
                 if (in_array('name', $this->ops)) {
