@@ -83,6 +83,13 @@ class packagist
         }
     }
 
+    public function getInfoRemotely($name = false)
+    {
+        $client = new \GuzzleHttp\Client();
+        $res = $client->request('GET', 'https://packagist.org/packages/' . $name . '.json');
+        return $res->getBody();
+    }
+
     public function count()
     {
         return count($this->packages);
